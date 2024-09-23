@@ -16,7 +16,20 @@ class Program
 		
     static void Main(string[] args)
     {
-		Console.WriteLine(GenerateName(int.Parse(args[0])));
+		int wordCount = 2;
+		
+		try 
+		{ 
+			wordCount = int.TryParse(args[0], out int _w) ? _w : 2;
+			if(wordCount <= 0)
+				throw new Exception("Input cannot be less than or equal to 0");
+		}
+		catch
+		{
+			Console.WriteLine("Couldn't parse wordcount arg. Defaulting to: 2.");
+		}
+		
+		Console.WriteLine(GenerateName(wordCount));
     }
 	
 	// TODO:
@@ -25,12 +38,12 @@ class Program
 	{
 		Random r = new Random();
 		
-		string prefix = $"{_prefixes[r.Next(0, _prefixes.Length - 1)]}{CONC}";
+		string prefix = $"{_prefixes[r.Next(0, _prefixes.Length)]}{CONC}";
 		string words = string.Empty;
 		
 		for(int i = 0; i < wordCount; i++)
 		{
-			string s = _words[r.Next(0, _words.Length - 1)];
+			string s = _words[r.Next(0, _words.Length)];
 			s = i == 0 ? s : $"{CONC}{s}";
 			words += s;
 		}
