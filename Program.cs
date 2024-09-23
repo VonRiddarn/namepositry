@@ -1,4 +1,7 @@
-﻿namespace namepositry;
+﻿// TODO:
+// Find a syntax that works for creating natural sounding word combinations
+
+namespace namepositry;
 class Program
 {
 	const string PREFIXES_FILE_PATH = "resources/prefixes.txt";
