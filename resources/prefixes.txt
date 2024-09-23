@@ -7,3 +7,8 @@ happy
 crazy
 tricky
 hungry
+heavy
+steady
+fast
+agressive
+clingy

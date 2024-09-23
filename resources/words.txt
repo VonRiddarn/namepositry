@@ -8,3 +8,16 @@ bowl
 ball
 trap
 piano
+student
+master
+cat
+otter
+potter
+sign
+stockholm
+helper
+karate
+shark
+fish
+mummy
+ghoul
